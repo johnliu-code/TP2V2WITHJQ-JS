@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>3.1 Manipulation d’images</title>
+    <style>
+        .imgBorder {
+            border: 10px solid rgb(28, 190, 176);
+            margin: -10px;
+        }
+    </style>
+</head>
+<body style = "margin : 50px">
+
+    <h2>Manipulation d’images</h2>
+
+    <img id = "SwitchImg" class = "" src="images/1.jpg" alt="image" width="600" onclick = "changeImages()"/>
+    <form action="Get" style = "margin-top : 20px">
+        <input type="radio" id="petit" name="imgsize" value="petit">
+        <label for="petit">Petit</label><br>
+        <input type="radio" id="moyen" name="imgsize" value="moyen">
+        <label for="moyen">Moyen</label><br>
+        <input type="radio" id="grand" name="imgsize" value="grand">
+        <label for="grand">Grand</label>
+    </form>
+    <button id = "borderToggle" onclick = "toggleSetborder()" style = "margin-top: 20px;">Ajouter bordures</button>
+
+       <script>
+           var image =  document.getElementById("SwitchImg");
+           var i = 0, imgNum = 4;
+           let selectedSize = "";
+           var showborder = false;
+           var imgurls = ["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg"];
+
+
+           //1. Switch images by click it
+           function changeImages() {   
+                if (i < imgNum) i++;
+                image.src = imgurls[i];  
+                if(i == 3) i = 0;     //Initial i to 0 when last image showing            
+           }
+
+           //2. Change the image size by choosing radio button
+            function imageSizeOption() {
+
+                const radioButtons = document.querySelectorAll('input[name="imgsize"]');    // Get all of the radio buttons
+
+                for (const radioButton of radioButtons) {
+                        //Check click events on radio button
+                        radioButton.onclick = (e) => {               
+                        selectedSize = e.target.value;     //Get the checked radio button value
+
+                        //Resize the image by change the width value
+                        if (selectedSize == "petit")
+                        document.getElementById("SwitchImg").style.width = "200px";
+
+                        if (selectedSize == "moyen")
+                        document.getElementById("SwitchImg").style.width = "400px";
+
+                        if (selectedSize == "grand")
+                        document.getElementById("SwitchImg").style.width = "600px";
+                    }
+
+                }
+            }
+
+            imageSizeOption();     //Call the function to check user option the change the image size
+
+            //3
+            function toggleSetborder(){
+                showborder = !showborder;  
+                if (showborder) {
+                    document.getElementById("SwitchImg").className = "imgBorder";
+                    document.querySelector('#borderToggle').innerHTML = 'Enlever bordures';
+                }
+                else {
+                    document.getElementById("SwitchImg").className = "";
+                    document.querySelector('#borderToggle').innerHTML = 'Ajouter bordures';
+                }
+
+            }
+
+       </script>
+
+</body>
+</html>

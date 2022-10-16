@@ -1,0 +1,165 @@
+/***** Invoice table *****/
+#invoicetable, #optsparent{
+    width: 100%;
+}
+.opt-title {
+    text-align: left;
+    padding: 1.5rem 0!important;
+    border: none!important;
+}
+
+/*****Invoice versin 1 style *****/
+.facture-style1 {
+    border: 1px solid #193cc8!important;
+    color:#193cc8;
+    padding: 50px!important;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px!important;
+    border-radius: 0.3rem;
+    margin: 3rem;
+}
+
+.facture-style1 p {
+    font-style: oblique;
+    font-weight: 500!important;
+}
+.facture-style1 th {
+    color:#193cc8;
+    font-size: 20px!important;
+    border-bottom: 1px solid #193cc8;
+    padding: 0.3rem 0;
+}
+
+.facture-style1 td {
+    text-align: center;
+    color: #193cc8;
+    border-bottom: 1px dashed #193cc8;
+    padding: 0.75rem 0;
+}
+
+/*****Invoice versin 2 style *****/
+.facture-style2 {
+    background-image: url(./images/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px!important;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px!important;
+    border-style: none!important;
+    transition: transform 1s;
+    border-radius: 0.3rem;
+    margin: 3rem;
+}
+.facture-style2  th{
+    border-bottom: 1px solid #dcc2d2;
+    padding: 0.3rem 0;
+} 
+.facture-style2  td {
+    border-bottom: 1px solid #dcc2d2;
+    padding: 0.75rem 0;
+    text-align: center;
+}
+.facture-style2  .sep-line{
+    background-color: #dcc2d2;
+    height: 0.5px;
+}
+.facture-style2  p {
+    font-style: italic;
+    font-weight: 700!important;
+}
+
+.facture-style2 :hover {
+    transform: translate(10px, 10px);
+}
+
+
+/***** User form *****/
+.hide{
+    display: none;
+}
+.bgcolor{
+    background: lime;
+}
+
+.page-container {
+    padding: 3rem;
+}
+.heading {
+    font-size: 2rem;
+}
+.info-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 1rem 0;
+}
+.div-2cols{
+    box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+.form-control {
+    display: block;
+    width: 80%;
+    padding: 0.3rem 0.7rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 0.3rem;
+    margin-top: 0.3rem;
+}
+
+.sep-line {
+    margin: 3rem 0;
+    color: #ced4da;
+}
+
+.div-marque-prix {
+    margin-bottom: 1rem;
+}
+.form-select {
+    display: block;
+    width: 40%;
+    padding: 0.3rem 0.7rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 0.3rem;
+    margin-top: 0.3rem;
+    background-image: url('images/down-arrow.png');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+}
+.form-check {
+    margin: 0.2rem 0;
+}
+
+.btn-commande {
+    padding: 0.5rem 2.5rem;
+    border: none;
+    background: #193cc8;
+    color: #ffffff;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.btn-recommance{
+    padding: 0.5rem 2.5rem;
+    border: none;
+    background: #19c850;
+    color: #ffffff;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.text-between-btn {
+    padding: 0 1rem;
+}
